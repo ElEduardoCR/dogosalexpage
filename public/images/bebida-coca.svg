@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="40%">
+      <stop offset="0%" stop-color="#ff7e1a"/>
+      <stop offset="100%" stop-color="#923600"/>
+    </radialGradient>
+    <linearGradient id="bottle" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#3a0d0d"/>
+      <stop offset="50%" stop-color="#1a0303"/>
+      <stop offset="100%" stop-color="#000"/>
+    </linearGradient>
+    <linearGradient id="label" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#e6e6e6"/>
+      <stop offset="100%" stop-color="#b0b0b0"/>
+    </linearGradient>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="20" stdDeviation="20" flood-opacity="0.4"/>
+    </filter>
+  </defs>
+  <rect width="400" height="400" fill="url(#bg)"/>
+  <g filter="url(#shadow)">
+    <ellipse cx="200" cy="360" rx="80" ry="14" fill="#000" opacity="0.4"/>
+  </g>
+  <g transform="translate(110 60)">
+    <path d="M0 50 Q0 30 20 25 L20 0 L40 0 L40 5 L60 5 L60 0 L80 0 L80 5 L100 5 L100 0 L120 0 L120 25 Q140 30 140 50 L140 280 Q140 300 120 300 L20 300 Q0 300 0 280 Z" fill="url(#bottle)"/>
+    <path d="M30 10 L30 25 L50 25 L50 10 Z M70 10 L70 25 L90 25 L90 10 Z" fill="#3a0d0d" opacity="0.6"/>
+    <rect x="10" y="90" width="120" height="160" fill="url(#label)"/>
+    <text x="70" y="150" text-anchor="middle" font-family="Georgia, serif" font-weight="900" font-size="32" fill="#1a0303">Coca</text>
+    <text x="70" y="190" text-anchor="middle" font-family="Georgia, serif" font-weight="900" font-size="32" fill="#1a0303">Cola</text>
+    <path d="M0 90 L20 95 L20 245 L0 250 Z" fill="#fff" opacity="0.3"/>
+  </g>
+</svg>

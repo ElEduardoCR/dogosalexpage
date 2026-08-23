@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="40%">
+      <stop offset="0%" stop-color="#ff7e1a"/>
+      <stop offset="100%" stop-color="#923600"/>
+    </radialGradient>
+    <linearGradient id="bottle" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ff5252"/>
+      <stop offset="50%" stop-color="#d50000"/>
+      <stop offset="100%" stop-color="#7f0000"/>
+    </linearGradient>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="20" stdDeviation="20" flood-opacity="0.4"/>
+    </filter>
+  </defs>
+  <rect width="400" height="400" fill="url(#bg)"/>
+  <g filter="url(#shadow)">
+    <ellipse cx="200" cy="360" rx="80" ry="14" fill="#000" opacity="0.4"/>
+  </g>
+  <g transform="translate(110 60)">
+    <path d="M0 50 Q0 30 20 25 L20 0 L40 0 L40 5 L60 5 L60 0 L80 0 L80 5 L100 5 L100 0 L120 0 L120 25 Q140 30 140 50 L140 280 Q140 300 120 300 L20 300 Q0 300 0 280 Z" fill="url(#bottle)"/>
+    <rect x="10" y="90" width="120" height="160" fill="#fff" opacity="0.95"/>
+    <text x="70" y="155" text-anchor="middle" font-family="Arial Black, sans-serif" font-weight="900" font-size="36" fill="#d50000">ELITE</text>
+    <line x1="20" y1="170" x2="120" y2="170" stroke="#d50000" stroke-width="2"/>
+    <text x="70" y="195" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#333" font-weight="700">DE FRESA</text>
+    <ellipse cx="70" cy="220" rx="22" ry="14" fill="#ff1744" opacity="0.9"/>
+    <path d="M62 215 Q70 210 78 215" stroke="#388e3c" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <circle cx="60" cy="218" r="2" fill="#fff8e1"/>
+    <circle cx="68" cy="222" r="1.5" fill="#fff8e1"/>
+    <path d="M0 90 L20 95 L20 245 L0 250 Z" fill="#fff" opacity="0.4"/>
+  </g>
+</svg>

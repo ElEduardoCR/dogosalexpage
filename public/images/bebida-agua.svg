@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="40%">
+      <stop offset="0%" stop-color="#ff7e1a"/>
+      <stop offset="100%" stop-color="#923600"/>
+    </radialGradient>
+    <linearGradient id="bottle" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#e1f5fe"/>
+      <stop offset="50%" stop-color="#b3e5fc"/>
+      <stop offset="100%" stop-color="#4fc3f7"/>
+    </linearGradient>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="20" stdDeviation="20" flood-opacity="0.4"/>
+    </filter>
+  </defs>
+  <rect width="400" height="400" fill="url(#bg)"/>
+  <g filter="url(#shadow)">
+    <ellipse cx="200" cy="360" rx="80" ry="14" fill="#000" opacity="0.4"/>
+  </g>
+  <g transform="translate(110 60)">
+    <path d="M0 50 Q0 30 20 25 L20 0 L40 0 L40 5 L60 5 L60 0 L80 0 L80 5 L100 5 L100 0 L120 0 L120 25 Q140 30 140 50 L140 280 Q140 300 120 300 L20 300 Q0 300 0 280 Z" fill="url(#bottle)"/>
+    <rect x="10" y="90" width="120" height="160" fill="#fff" opacity="0.85"/>
+    <text x="70" y="135" text-anchor="middle" font-family="Arial, sans-serif" font-weight="700" font-size="18" fill="#0277bd">AGUA</text>
+    <text x="70" y="160" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#666">—</text>
+    <text x="70" y="190" text-anchor="middle" font-family="Arial Black, sans-serif" font-weight="900" font-size="28" fill="#d32f2f">PULPY</text>
+    <circle cx="50" cy="220" r="8" fill="#fff" opacity="0.6"/>
+    <circle cx="70" cy="225" r="10" fill="#fff" opacity="0.5"/>
+    <circle cx="90" cy="218" r="7" fill="#fff" opacity="0.6"/>
+    <path d="M0 90 L20 95 L20 245 L0 250 Z" fill="#fff" opacity="0.5"/>
+  </g>
+</svg>
