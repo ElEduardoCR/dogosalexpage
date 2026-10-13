@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { ShoppingBag, Menu as MenuIcon, X } from "lucide-react";
@@ -30,14 +31,11 @@ export function Nav() {
 
   return (
     <>
-      <motion.header
-        initial={{ y: -80, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+      <header
         className={cn(
-          "fixed left-0 right-0 top-0 z-50 transition-all duration-500",
+          "fixed left-0 right-0 top-0 z-50 animate-slide-down transition-[background-color,box-shadow] duration-500",
           scrolled
-            ? "bg-cream/90 backdrop-blur-xl shadow-[0_2px_30px_-20px_rgba(0,0,0,0.4)]"
+            ? "bg-cream/95 backdrop-blur-md shadow-[0_2px_30px_-20px_rgba(0,0,0,0.4)]"
             : "bg-transparent",
         )}
       >
@@ -48,10 +46,12 @@ export function Nav() {
               transition={{ duration: 0.5 }}
               className="relative h-12 w-12 overflow-hidden rounded-full ring-2 ring-brand-500/40 group-hover:ring-brand-500 transition-all"
             >
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
+              <Image
                 src="/images/logo.png"
                 alt="Dogos El Alex"
+                width={48}
+                height={48}
+                priority
                 className="h-full w-full object-cover"
               />
             </motion.div>
@@ -111,7 +111,7 @@ export function Nav() {
             </button>
           </div>
         </div>
-      </motion.header>
+      </header>
 
       <AnimatePresence>
         {mobileOpen && (

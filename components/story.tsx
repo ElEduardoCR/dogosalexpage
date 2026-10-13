@@ -33,8 +33,8 @@ export function Story() {
       {/* Background */}
       <div className="absolute inset-0 -z-10 bg-ink-900" />
       <div className="absolute inset-0 -z-10 grain opacity-40" />
-      <div className="pointer-events-none absolute -left-32 top-1/3 h-96 w-96 rounded-full bg-brand-500/30 blur-3xl" />
-      <div className="pointer-events-none absolute -right-20 bottom-0 h-96 w-96 rounded-full bg-brand-700/40 blur-3xl" />
+      <div className="glow -left-32 top-1/3 h-96 w-96 text-brand-500/30" />
+      <div className="glow -right-20 bottom-0 h-96 w-96 text-brand-700/40" />
 
       <div className="container-page">
         <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
@@ -57,17 +57,13 @@ export function Story() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-ink-900/70 via-transparent to-transparent" />
             </div>
-            <motion.div
-              animate={{ y: [0, -10, 0] }}
-              transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-              className="absolute -bottom-8 -right-8 hidden rounded-3xl bg-brand-500 p-6 text-white shadow-2xl sm:block"
-            >
+            <div className="absolute -bottom-8 -right-8 hidden animate-float rounded-3xl bg-brand-500 p-6 text-white shadow-2xl [animation-duration:4s] sm:block">
               <div className="font-script text-2xl leading-none">desde</div>
               <div className="font-display text-6xl leading-none">1990</div>
               <div className="mt-2 text-xs uppercase tracking-widest opacity-80">
                 Chihuahua, Chih.
               </div>
-            </motion.div>
+            </div>
             <motion.div
               initial={{ scale: 0 }}
               whileInView={{ scale: 1 }}
@@ -114,7 +110,7 @@ export function Story() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: 0.2 + i * 0.1 }}
-                  className="rounded-2xl border border-ink-700 bg-ink-800/50 p-5 backdrop-blur"
+                  className="rounded-2xl border border-ink-700 bg-ink-800/50 p-5"
                 >
                   <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-brand-500 text-white">
                     {p.icon}

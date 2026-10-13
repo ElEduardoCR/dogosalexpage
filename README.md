@@ -8,7 +8,6 @@ Sitio web oficial de **Dogos El Alex** — dogos, burgers y burritos desde 1990,
 - **TypeScript** (strict)
 - **Tailwind CSS v4** (config en CSS, sin `tailwind.config.js`)
 - **Motion** (ex-Framer Motion) — transiciones de página, layout, spring physics
-- **Lenis** — smooth scroll
 - **Zustand** — estado del carrito, persiste en `localStorage`
 - **View Transitions API** nativa del browser
 - **Sonner** — toasts
@@ -48,13 +47,14 @@ Variables de entorno: ninguna requerida.
 
 ```
 app/             # Rutas (App Router)
-├── layout.tsx   # Providers, fuentes, smooth scroll, cart drawer
+├── layout.tsx   # Providers, fuentes, cart drawer
 ├── page.tsx     # Home (hero + menú + historia + contacto)
 └── globals.css  # Tailwind v4 + tokens de marca
 
 components/      # UI components
 ├── nav.tsx
-├── hero.tsx
+├── hero.tsx               # Server Component, animaciones en CSS
+├── add-to-cart-button.tsx # Botón cliente "agregar y abrir carrito"
 ├── menu-section.tsx
 ├── menu-card.tsx
 ├── cart-drawer.tsx
@@ -62,7 +62,6 @@ components/      # UI components
 ├── story.tsx
 ├── contact.tsx
 ├── footer.tsx
-├── smooth-scroll.tsx
 └── floating-cta.tsx
 
 lib/
@@ -82,7 +81,7 @@ Editar `lib/menu.ts`. Cada item tiene:
   name: string;          // nombre visible
   description: string;   // descripción corta
   price: number;         // MXN
-  image: string;         // path en /public
+  image: string;         // path en /public (máx. ~1600 px de ancho; Next la optimiza)
   badge?: "Bestseller" | "Signature" | "Nuevo";
   category: "dogos" | "burgers" | "burritos" | "bebidas";
 }

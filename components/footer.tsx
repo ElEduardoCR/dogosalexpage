@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "motion/react";
 import { Instagram, Facebook, MessageCircle, MapPin, Clock } from "lucide-react";
 import { RESTAURANT } from "@/lib/whatsapp";
@@ -23,7 +24,7 @@ export function Footer() {
   return (
     <footer className="relative overflow-hidden bg-ink-900 text-cream">
       <div className="absolute inset-0 grain opacity-20" />
-      <div className="pointer-events-none absolute -left-32 top-0 h-96 w-96 rounded-full bg-brand-500/15 blur-3xl" />
+      <div className="glow -left-32 top-0 h-96 w-96 text-brand-500/15" />
 
       {/* Marquee */}
       <div className="relative border-y border-ink-700 bg-brand-500 py-4">
@@ -48,10 +49,11 @@ export function Footer() {
         <div className="lg:col-span-1">
           <div className="flex items-center gap-3">
             <div className="h-14 w-14 overflow-hidden rounded-full ring-2 ring-brand-500/40">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
+              <Image
                 src="/images/logo.png"
                 alt="Dogos El Alex"
+                width={56}
+                height={56}
                 className="h-full w-full object-cover"
               />
             </div>

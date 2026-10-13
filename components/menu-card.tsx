@@ -38,13 +38,13 @@ export function MenuCard({ item, index }: { item: MenuItem; index: number }) {
         />
         <div className="absolute inset-0 bg-gradient-to-t from-ink-900/40 via-transparent to-transparent" />
         {item.badge && (
-          <div className="absolute left-3 top-3 flex items-center gap-1 rounded-full bg-cream/95 px-3 py-1 text-xs font-bold uppercase tracking-wider text-brand-600 shadow-md backdrop-blur">
+          <div className="absolute left-3 top-3 flex items-center gap-1 rounded-full bg-cream/95 px-3 py-1 text-xs font-bold uppercase tracking-wider text-brand-600 shadow-md">
             {item.badge === "Bestseller" && "⭐ "}
             {item.badge === "Signature" && "👑 "}
             {item.badge}
           </div>
         )}
-        <div className="absolute right-3 top-3 rounded-full bg-ink-900/80 px-3 py-1.5 font-display text-lg text-white shadow-md backdrop-blur">
+        <div className="absolute right-3 top-3 rounded-full bg-ink-900/80 px-3 py-1.5 font-display text-lg text-white shadow-md">
           {formatMXN(item.price)}
         </div>
       </div>

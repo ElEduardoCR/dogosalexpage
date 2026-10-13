@@ -1,7 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Inter, Anton, Caveat } from "next/font/google";
 import "./globals.css";
-import { SmoothScroll } from "@/components/smooth-scroll";
 import { Nav } from "@/components/nav";
 import { Footer } from "@/components/footer";
 import { CartDrawer } from "@/components/cart-drawer";
@@ -25,6 +24,8 @@ const caveat = Caveat({
   weight: ["400", "700"],
   variable: "--font-script",
   display: "swap",
+  // Solo decora textos pequeños ("desde 1990"); no compite con el hero al cargar
+  preload: false,
 });
 
 export const metadata: Metadata = {
@@ -69,12 +70,10 @@ export default function RootLayout({
   return (
     <html lang="es-MX" className={`${inter.variable} ${anton.variable} ${caveat.variable}`}>
       <body className="bg-cream text-ink-900">
-        <SmoothScroll>
-          <Nav />
-          <main className="min-h-screen">{children}</main>
-          <Footer />
-          <CartDrawer />
-        </SmoothScroll>
+        <Nav />
+        <main className="min-h-screen">{children}</main>
+        <Footer />
+        <CartDrawer />
         <Toaster
           position="top-center"
           richColors

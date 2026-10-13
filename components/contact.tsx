@@ -40,7 +40,7 @@ export function Contact() {
             <div className="absolute inset-0 grain opacity-20" />
             <div className="absolute -right-8 -top-8 h-40 w-40 rounded-full bg-white/10 blur-2xl" />
             <div className="relative flex h-full flex-col">
-              <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-white/20 backdrop-blur">
+              <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-white/20">
                 <MessageCircle className="h-6 w-6" />
               </div>
               <h3 className="mt-6 font-display text-4xl">WhatsApp</h3>
@@ -102,7 +102,7 @@ export function Contact() {
             <div className="absolute inset-0 grain opacity-20" />
             <div className="relative flex h-full flex-col items-start gap-4 sm:flex-row sm:items-center sm:justify-between">
               <div>
-                <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-white/20 backdrop-blur">
+                <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-white/20">
                   <Bike className="h-6 w-6" />
                 </div>
                 <h3 className="mt-4 font-display text-3xl">

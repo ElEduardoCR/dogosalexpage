@@ -86,6 +86,10 @@ export const useCart = create<CartState>()(
     {
       name: "dogosalex-cart",
       partialize: (s) => ({ lines: s.lines }),
+      // El HTML se genera con el carrito vacío; si leyéramos localStorage antes
+      // de hidratar, React detecta la diferencia y re-renderiza toda la página.
+      // Se rehidrata en un efecto (ver CartDrawer).
+      skipHydration: true,
     },
   ),
 );

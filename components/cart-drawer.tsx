@@ -22,6 +22,10 @@ export function CartDrawer() {
   const [step, setStep] = useState<"cart" | "checkout">("cart");
 
   useEffect(() => {
+    void useCart.persist.rehydrate();
+  }, []);
+
+  useEffect(() => {
     if (!isOpen) {
       const t = setTimeout(() => setStep("cart"), 400);
       return () => clearTimeout(t);
